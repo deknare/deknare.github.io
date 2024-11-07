@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaptation</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Main CSS file -->
+    <link rel="stylesheet" href="adaptation.css"> <!-- Adaptation specific CSS -->
+</head>
+<body>
+    <!-- Navbar Section Starts Here -->
+    <section class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#" title="Logo">
+                    <img src="images/KnareloFINAL04.png" alt="Adaptation Logo" class="img-responsive center-image glowImage"> <!-- Logo with glow effect -->
+                </a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </section>
+    <!-- Navbar Section Ends Here -->
+
+    <!-- Upload Form for Files -->
+    <div class="upload-container">
+        <h2>Upload Your Files</h2>
+        <form id="upload-form" action="upload.php" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" accept="*/*" required> <!-- Accept all file types -->
+            <input type="submit" value="Upload"> <!-- Submit button -->
+        </form>
+    </div>
+    <!-- Upload Form Ends Here -->
+
+    <!-- Current Playlist Section -->
+    <div class="current-playlist">
+        <h2>Current Playlist</h2>
+        <ul id="playlist">
+            <!-- Playlist items will be dynamically loaded here -->
+        </ul>
+    </div>
+    <!-- Current Playlist Section Ends Here -->
+
+    <!-- Footer Section Starts Here -->
+    <footer>
+        <div class="container">
+            Knare Tech LLC
+        </div>
+    </footer>
+    <!-- Footer Section Ends Here -->
+
+    <script src="adaptation.js"></script> <!-- Link to JavaScript file for adaptation -->
+</body>
+</html>

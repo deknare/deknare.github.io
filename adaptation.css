@@ -1,0 +1,48 @@
+/* Adaptation Specific Styles */
+body {
+    background-color: #f9f9f9; /* Light background color for adaptation page */
+    color: #333; /* Text color */
+    font-family: Arial, Helvetica, sans-serif; /* Font style */
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center align items */
+}
+
+/* Upload Container */
+.upload-container {
+    padding: 20px; /* Padding around the upload section */
+    text-align: center; /* Center-align text */
+}
+
+/* Current Playlist Styles */
+.current-playlist {
+    margin-top: 20px; /* Space above playlist */
+    padding: 20px; /* Padding around the playlist */
+    background: #fff; /* White background for playlist */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.current-playlist ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.current-playlist li {
+    padding: 10px; /* Padding for each file entry */
+    border-bottom: 1px solid #ddd; /* Bottom border for separation */
+}
+
+.current-playlist li:last-child {
+    border-bottom: none; /* Remove border for last item */
+}
+
+/* Footer Styles */
+footer {
+    margin-top: auto; /* Push footer to the bottom */
+    background: rgb(0, 0, 0); /* Footer background color */
+    color: white; /* Footer text color */
+    font-size: 12px; /* Font size for footer */
+    padding: 20px; /* Padding around the footer */
+    text-align: center; /* Center-align text in the footer */
+}

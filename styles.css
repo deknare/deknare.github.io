@@ -1,0 +1,264 @@
+/* General Body */
+body {
+    color: pink; /* Text color */
+    font-family: Arial, Helvetica, sans-serif; /* Font style */
+    background: whitesmoke; /* Background color */
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Stack children vertically */
+    min-height: 100vh; /* Minimum height to fill the viewport */
+}
+
+/* Navbar */
+.navbar {
+    padding: 20px; /* Padding around the navbar */
+    text-align: center; /* Center-align text */
+}
+
+.center-image {
+    display: block; /* Display image as a block */
+    margin: 0 auto; /* Center the image */
+    width: 100%; /* Full width */
+    max-width: 400px; /* Maximum width */
+}
+
+/* Glow Effect */
+.glowImage {
+    width: 300px; /* Set the size of your image */
+    height: auto; /* Maintain aspect ratio */
+    animation: glow 2s infinite; /* Apply the glow animation */
+    -webkit-animation: glow 2s infinite; /* For Safari support */
+}
+
+@keyframes glow {
+    0% {
+        filter: drop-shadow(0 0 10px rgba(0, 255, 0, 0.8)); /* Initial glow */
+    }
+    50% {
+        filter: drop-shadow(0 0 20px rgba(0, 255, 0, 1)); /* Brightest glow */
+    }
+    100% {
+        filter: drop-shadow(0 0 10px rgba(0, 255, 0, 0.8)); /* Final glow */
+    }
+}
+
+/* Features Section */
+.features {
+    background: whitesmoke; /* Match background with body */
+    color: #87ceeb; /* Text color for features */
+    padding: 20px; /* Padding around the features section */
+}
+
+.placeholder-grid {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+    gap: 20px; /* Space between grid items */
+    justify-items: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+.placeholder {
+    display: flex; /* Use flexbox for each placeholder */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+}
+
+/* Circle Styles */
+.adaptation-circle {
+    width: 220px; /* Width of the ADAPTATION circle */
+    height: 250px; /* Height of the ADAPTATION circle */
+    border-radius: 50%; /* Make it circular */
+    background-color: #333; /* Default background color */
+    position: relative; /* For positioning any image overlay */
+    overflow: hidden; /* Ensure content doesn't overflow */
+    background-image: url('images/Encrypta.JPG'); /* Path to your image for ADAPTATION */
+    background-size: cover; /* Cover to ensure the image fills the circle */
+    background-position: center 20%; /* Center the image */
+    animation: rotateY 30s linear infinite; /* Spin animation for ADAPTATION */
+    cursor: pointer; /* Change cursor to indicate clickable */
+}
+
+.dark-circle {
+    width: 150px; /* Width of the dark circles */
+    height: 150px; /* Height of the dark circles */
+    border-radius: 50%; /* Make it circular */
+    background-color: #333; /* Default background color */
+    position: relative; /* For positioning the lock icon */
+    overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+/* Lock Icon Styles */
+.lock-icon {
+    width: 70px; /* Set the width of the lock icon */
+    height: 70px; /* Set the height of the lock icon */
+    position: absolute; /* Position it absolutely within the dark circle */
+    top: 50%; /* Center it vertically */
+    left: 50%; /* Center it horizontally */
+    transform: translate(-50%, -50%); /* Adjust positioning to perfectly center the icon */
+    background-image: url('images/lock-100.png'); /* Path to your lock icon image */
+    background-size: contain; /* Ensure the image fits within the icon */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+}
+
+/* Adjust text below the circle */
+.placeholder p {
+    margin-top: 20px; /* Increase margin-top to push text down */
+    color: #000; /* Change text color to black */
+    font-size: 16px; /* Adjust font size if needed */
+}
+
+/* Footer */
+footer {
+    background: rgb(0, 0, 0); /* Footer background color */
+    color: white; /* Footer text color */
+    font-size: 12px; /* Font size for footer */
+    padding: 20px; /* Padding around the footer */
+    text-align: center; /* Center-align text in the footer */
+    margin-top: auto; /* Push footer to the bottom */
+    border-top: 1px solid #ccc; /* Top border */
+}
+
+/* Plus Sign Dropdown Icon */
+.dropdown-icon {
+    display: inline-block; /* Inline-block for dropdown icon */
+    font-size: 36px; /* Increase font size */
+    color: #000; /* Color of the icon */
+    text-decoration: none; /* No underline on link */
+    transition: transform 0.3s, color 0.3s; /* Transition effects */
+}
+
+.dropdown-icon:hover {
+    transform: rotate(90deg); /* Rotate on hover */
+    color: #ff0000; /* Change color on hover */
+}
+
+/* Dropdown Menu */
+.text-right .dropdown-content {
+    display: none; /* Initially hidden */
+    border-radius: 10px; /* Rounded corners */
+    z-index: 1; /* Layering */
+    min-width: 160px; /* Minimum width */
+    text-align: center; /* Center text */
+    margin-top: 10px; /* Space above dropdown */
+    background: none; /* No background */
+}
+
+.text-right .dropdown-content a {
+    color: red; /* Text color for links */
+    padding: 12px 16px; /* Padding for links */
+    text-decoration: none; /* No underline */
+    display: block; /* Block display for links */
+    background: none; /* No background */
+}
+
+.text-right .dropdown-content a:hover {
+    background: none; /* No background on hover */
+    color: #ff0000; /* Change color on hover */
+}
+
+.text-right:hover .dropdown-content {
+    display: block; /* Show dropdown on hover */
+}
+
+/* Keyframes for 3D rotation */
+@keyframes rotateY {
+    0% {
+        transform: rotateY(0deg); /* Start position */
+    }
+    100% {
+        transform: rotateY(360deg); /* End position */
+    }
+}
+
+/* Responsive Rules */
+@media only screen and (max-width: 768px) {
+    .logo {
+        width: auto; /* Use automatic width to maintain aspect ratio */
+        max-width: 300px; /* Ensure the logo does not exceed this width */
+        margin: 0 auto; /* Center the logo */
+    }
+    .btn {
+        width: 91%; /* Button width */
+        padding: 2%; /* Button padding */
+    }
+    .features {
+        padding: 10% 0; /* Adjust padding */
+    }
+    .placeholder-grid {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 10px; /* Reduced gap */
+    }
+    h2 {
+        margin-bottom: 10%; /* Bottom margin for headings */
+    }
+    .box-3 {
+        width: 100%; /* Full width for box */
+        margin: 4% auto; /* Center with margin */
+    }
+    .food-menu {
+        padding: 20% 0; /* Adjust food menu padding */
+    }
+    .food-menu-box {
+        width: 90%; /* Width of food menu box */
+        padding: 5%; /* Padding for food menu box */
+        margin-bottom: 5%; /* Bottom margin */
+    }
+    .order {
+        width: 100%; /* Full width for order */
+    }
+    .text-right {
+        display: flex; /* Flexbox layout */
+        justify-content: center; /* Center items */
+    }
+    .text-right .dropdown {
+        position: static; /* Static positioning */
+        text-align: center; /* Center text */
+    }
+    .text-right .dropdown-content {
+        display: none; /* Initially hidden */
+        position: static; /* Static positioning */
+        margin: 10px auto; /* Center with margin */
+        right: auto; /* Default position */
+        top: auto; /* Default position */
+        border-radius: 10px; /* Rounded corners */
+        z-index: 1; /* Layering */
+        min-width: 160px; /* Minimum width */
+        text-align: center; /* Center text */
+        background: none; /* No background */
+    }
+    .text-right:hover .dropdown-content {
+        display: block; /* Show dropdown on hover */
+    }
+    .center-image {
+        width: 80%; /* Responsive width for images */
+        max-width: 400px; /* Maximum width */
+        margin: 0 auto; /* Center with margin */
+    }
+}
+
+/* CSS for All */
+* {
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+    font-family: Arial, Helvetica, sans-serif; /* Font family */
+}
+
+.container {
+    width: 80%; /* Container width */
+    margin: 0 auto; /* Center with margin */
+    padding: 1%; /* Padding for container */
+}
+
+.img-responsive {
+    width: 100%; /* Full width for responsive images */
+}
+
+.img-curve {
+    border-radius: 15px; /* Rounded corners for images */
+}
+
+.text-right {
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center items */
+    margin-bottom: 10px; /* Bottom margin */
+}
